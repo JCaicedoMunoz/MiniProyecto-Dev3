@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Footer from './components/Footer';
-import Title from './Title';
+import Title from './components/Title';
 import Nav from './components/Nav';
 import Card from './components/Card'
 
