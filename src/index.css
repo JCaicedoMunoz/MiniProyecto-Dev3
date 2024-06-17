@@ -9,24 +9,23 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #f0f0f0;
+  padding: 30px 50px;
+  
 }
 
 .all-card {
   padding: 1rem;
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
+  gap: 1rem; /* Ajuste el valor de gap según tus necesidades */
 }
 
 .card {
-  border: 1px solid #ddd;
+  border: 1px solid #F2F2F2;
   border-radius: 8px;
   overflow: hidden;
   width: 100%;
-  max-width: 300px;
+  max-width: 400px; /* Ancho máximo de cada tarjeta */
   margin: 0 auto;
 }
 
@@ -48,12 +47,10 @@ body {
 }
 
 .superhost {
-  background-color: #ff5a5f;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: bold;
+  margin-right: 4px; 
+  border: 1px solid #4f4f4f;
+  border-radius: 12px; 
+  padding: 4px; 
 }
 
 .entire-apartment {
@@ -66,31 +63,53 @@ body {
   align-items: center;
 }
 
-.star-icon {
-  color: #ff5a5f;
-  margin-right: 4px;
+.rating .size-6{
+  width: 24px;
+  height: 24px;
+  stroke:  #EB5757;
+  ; /* Cambia el color del trazo a rojo */
+  fill:  #EB5757; /* Cambia el color de relleno a rojo */
+  margin-right: 4px; /* Espacio a la derecha del icono */
 }
 
 .card-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0;
-  color: #333;
+  width: 308px; 
+  height: 20px; 
+  font-size: 16px;
+  font-weight: 600; 
+  line-height: 19.5px; 
 }
 
 .logo img {
   width: 50px;
 }
-
+.search svg.size-6 {
+  width: 24px;
+  height: 24px;
+  stroke:#EB5757;
+  /* Cambia el color del trazo a rojo */
+}
 .search {
   display: flex;
   align-items: center;
+  border: 1px solid #F2F2F2;
+  border-radius: 16px; /* Agrega un borde rojo de 1px alrededor del contenedor */
+  padding: 5px; 
 }
 
 .search input {
-  padding: 5px 10px;
-  font-size: 16px;
+  padding: 5px 8px; /* Ajusta el relleno (padding) horizontalmente */
+  font-size: 14px; /* Tamaño de la fuente */
+  width: 100px; 
+  height: 40px;/* Ancho del input */
+  max-width: 100%; /* Asegura que el input no sea más ancho que su contenedor */
+  border: none; /* Quita el borde */
+  outline: none; /* Quita el contorno al enfocar */
 }
+.search input::placeholder {
+  opacity: 0.5;
+}
+
 
 .search figure {
   margin: 0;
@@ -100,24 +119,59 @@ body {
 .search svg.size-6 {
   width: 24px;
   height: 24px;
+  
 }
 
 .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #ffffff;
-  border-top: 1px solid #e0e0e0;
+  padding: 10px 50px;
 }
 
 .title h1 {
   margin: 0;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .title p {
   margin: 0;
   font-size: 18px;
   color: #777;
+}
+
+/* Media Query para pantallas grandes */
+@media (min-width: 768px) {
+  .all-card {
+    grid-template-columns: repeat(3, 1fr); /* Tres tarjetas por fila */
+    gap: 1.5rem; /* Ajuste el valor de gap para pantallas grandes */
+  }
+}
+
+footer {
+ 
+  text-align: center; 
+  align-items: center;/* Centrar el texto */
+  padding: 1rem; 
+  width: 100%; 
+  height: 50px;
+  margin-top: 50px;
+ 
+}
+
+footer p {
+  margin: 0; /* Eliminar márgenes por defecto */
+  color: #828282; /* Color del texto */
+  font-size: 14px; 
+  
+}
+
+footer a {
+  color: #5e5c5c;/* Color del enlace */
+  text-decoration: none; /* Eliminar subrayado */
+  font-weight: bold; /* Hacer el texto en negrita */
+}
+
+footer a:hover {
+  color: #b3b3b3; /* Color del enlace al pasar el ratón */
 }
